@@ -1,28 +1,39 @@
-# Neon Agent Skills (`neon-innovation-lab/neon-agent-skills`)
+# Neon Agent Skills & Model Context Protocol (MCP) Gateway (2026)
 
-Executable `SKILL.md` registry bundle for Claude Code, Cursor, Windsurf, Cline, and OpenClaw agents - covering both zero-install Non-MCP REST tools and Model Context Protocol (MCP) infrastructure from **Neon Innovation Lab**.
+Official `SKILL.md` and Streamable HTTP Model Context Protocol (`MCP`) tool suite for **Cursor**, **Claude Code**, **Claude Desktop**, **Codex**, and **Antigravity**.
 
-## One-Command Agent Install
+- **Streamable HTTP MCP Endpoint:** `https://neoninnovationlab.com/api/mcp-gateway` (25 free calls/day per IP; automatic HTTP `402 Payment Required` upgrade loop).
+- **LLM Discovery Manifests:** [https://neoninnovationlab.com/llms.txt](https://neoninnovationlab.com/llms.txt) | [https://neoninnovationlab.com/llms-full.txt](https://neoninnovationlab.com/llms-full.txt)
 
-```bash
-npx skills add neon-innovation-lab/neon-agent-skills
+---
+
+## Available Live MCP Tools on `/api/mcp-gateway`
+
+| Tool Name | Description | Free Quota & Upgrade SKU |
+| :--- | :--- | :--- |
+| `audit_website_aeo` | Runs a live FastLLM AI Search (AEO) audit on any URL (OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, `/llms.txt`, JSON-LD score). | 25 free/day -> [FastLLM Pro ($9 Lifetime)](https://neoninnovationlab.com/checkout?item=fastllm_pro) |
+| `extract_local_b2b_leads` | Extracts live local B2B business leads by category and city via NeonMaps (phones, websites, public emails, no-website filter). | 25 free/day -> [NeonMaps Pro ($19 Lifetime)](https://neoninnovationlab.com/checkout?item=neonmaps_pro) |
+| `inspect_tool_call_security` | Zero-Trust AST & DLP firewall inspecting MCP tool arguments for CWE-78 command injection, SSRF, and path traversal. | 25 free/day -> [Starter MCP ($19)](https://neoninnovationlab.com/checkout?item=starter_mcp) |
+| `redact_pii_dlp` | Real-time PII, API key, JWT, and secret redaction before LLM context ingestion. | 25 free/day -> [Starter MCP ($19)](https://neoninnovationlab.com/checkout?item=starter_mcp) |
+| `create_paypal_checkout_order` | Native Agent-to-Agent (AP2) PayPal order creation for any Neon Innovation Lab SKU. | Built-in |
+
+---
+
+## Quick Connect (Cursor / Claude Desktop `mcp.json`)
+
+```json
+{
+  "mcpServers": {
+    "neon-enterprise-gateway": {
+      "url": "https://neoninnovationlab.com/api/mcp-gateway"
+    }
+  }
+}
 ```
 
-## Included Skills
+## Companion Chrome Extensions & Comparison Guides
+- **FastLLM ($9 Lifetime):** [Chrome Web Store](https://chromewebstore.google.com/detail/fbkcdpjndneocipnafbhofcnnkoaobac) | [FastLLM vs Detailed SEO](https://neoninnovationlab.com/compare/fastllm-vs-detailed-seo)
+- **ThreadShelf ($29 Lifetime):** [Chrome Web Store](https://chromewebstore.google.com/detail/phnbmohlbfanaaheeajhhdcfdhkbccja) | [ThreadShelf vs Superpower ChatGPT](https://neoninnovationlab.com/compare/threadshelf-vs-superpower-chatgpt)
+- **NeonMaps ($19 Lifetime):** [Chrome Web Store](https://chromewebstore.google.com/detail/ebocdjlmkaabdcjnlfhcjlibnmkbamkg) | [NeonMaps vs Outscraper](https://neoninnovationlab.com/compare/neonmaps-vs-outscraper)
 
-| Skill | Category | Live Zero-Login Sandbox | Direct Upgrade (No Middleman) |
-| :--- | :--- | :--- | :--- |
-| `web-to-markdown` | RAG Extraction API | `https://neoninnovationlab.com/tools/web-to-markdown` | `/checkout?item=reader_starter` (`$19` for 5,000 credits) |
-| `aeo-geo-audit` | AI Search / GEO & Shopify | `https://neoninnovationlab.com/tools/aeo-audit` | `npx @neon/aeo-engine` / Shopify App (`$29/mo`) |
-| `ads-policy-forensics` | Google Ads Diagnostics | `https://neoninnovationlab.com/tools/google-ads-diagnostic` | `/checkout?item=google_ads_audit_pro` (`$49`) |
-| `agentguard-approval` | Human-in-the-Loop Gate | `https://neoninnovationlab.com/tools/agent-guard` | `/checkout?item=agent_guard_lifetime` (`$99` Lifetime) |
-| `video-clipper-workflow` | Local FFmpeg + Whisper | `https://neoninnovationlab.com/clipper-os` | `/checkout?item=clipper_pro` (`$49/mo`) |
-| `contextshield-mcp-router` | MCP Token Pruning | `https://neoninnovationlab.com/tools/mcp-gateway-hub` | `/checkout?item=mcp_gateway` (`$99` Lifetime) |
-| `a2a-card-security` | DevSecOps / SARIF CI | `https://neoninnovationlab.com/tools/mcp-security-scanner` | `/checkout?item=a2a_pro_ci` (`$49`) |
-
-## Official Links
-
-- Website & Live Tools: https://neoninnovationlab.com/tools
-- Comparison Benchmarks: https://neoninnovationlab.com/compare
-- Full AI Search Manifest: https://neoninnovationlab.com/llms.txt
-- Support Contact: hello@neoninnovationlab.com (Alex Rivers, Neon Innovation Lab)
+Contact: `hello@neoninnovationlab.com`
